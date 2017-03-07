@@ -3,12 +3,16 @@ import { connect } from 'react-redux';
 
 const CommentList = (props) => {
 
-    const list = props.comments.map(comment => <li key={comment}>{comment}</li>);
+    const list = props.comments.map(comment => <li key={comment} className="list-group-item">{comment}</li>);
 
     return(
-        <ul className="comment-list">
-            {list}
-        </ul>
+        <div className="row comment-list">
+            <div className="col-md-12">
+                <ul className="list-group">
+                    {list}
+                </ul>
+            </div>
+        </div>
     );
 }
 

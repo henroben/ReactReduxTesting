@@ -28,12 +28,19 @@ class CommentBox extends Component {
 
     render() {
         return(
-            <form onSubmit={this.onSubmitHandler.bind(this)} className="comment-box">
-                <textarea name="commentBox" id="commentBox" cols="30" rows="10"
+            <div className="row comment-box">
+                <div className="col-md-12">
+                    <form onSubmit={this.onSubmitHandler.bind(this)} className="comment-form">
+                        <h4>Add A Comment</h4>
+                        <textarea className="form-control" name="commentBox" id="commentBox" cols="30" rows="10"
                           onChange={this.onChangeHandler.bind(this)}
                           value={this.state.comment} />
-                <button action="submit">Submit Comment</button>
-            </form>
+                        <button action="submit" className="btn btn-primary btn-block">Submit Comment</button>
+                    </form>
+                </div>
+
+            </div>
+
         );
     }
 
